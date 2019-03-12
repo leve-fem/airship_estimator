@@ -1,0 +1,18 @@
+<launch> 
+	
+<node pkg="airship_estimator" type="accel_estimator_node" name="accel_estimator_node_ukf">
+    <rosparam command="load" file="$(find airship_estimator)/config/accel_estimator_params.yaml" />
+    <remap from="/odometry/filtered" to="/odometry/filtered_ukf"/>
+    <remap from="/droni_sensors/linear_accel_filtered" to="/droni_sensors/linear_accel_filtered_ukf"/>
+	<remap from="/droni_sensors/angular_accel_filtered" to="/droni_sensors/angular_accel_filtered_ukf"/>
+    <remap from="/droni_sensors/imu/data_corrected" to="/droni_sensors/imu/data_corrected_ukf"/>
+
+</node>
+<node pkg="robot_localization" type="ukf_localization_node" name="ukf_se" clear_params="true">
+    <rosparam command="load" file="$(find airship_estimator)/config/ukf_params.yaml" />
+    <remap from="/accel/filtered" to="/droni_sensors/linear_accel_filtered_ukf"/>
+    <remap from="/odometry/filtered" to="/odometry/filtered_ukf"/>
+    <remap from="/droni_sensors/imu/data_corrected" to="/droni_sensors/imu/data_corrected_ukf"/>
+</node>
+
+</launch>

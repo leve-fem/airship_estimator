@@ -1,0 +1,7 @@
+<launch> 
+	
+<node pkg="airship_estimator" type="lpf_node" name="lpf_node">
+    <remap from="/odometry/filtered" to="/odometry/filtered_lpf"/>
+</node>
+
+</launch>

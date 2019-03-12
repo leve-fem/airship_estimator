@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<robot name="virtual_blimp" xmlns:xacro="http://ros.org/wiki/xacro">
+
+<xacro:property name="gondola_xyz" value="1.357 0.0 -1.43"/>
+<xacro:property name="gondola_rpy" value="0.0 0.0 0.0"/>
+
+<!-- Estimated blimp -->
+<link name="base_link">
+</link>
+<link name="gondola_link">
+  <visual>
+    <geometry>
+      <mesh filename="package://blimp_description/meshes/blimp.dae"/>
+    </geometry>
+  </visual>
+  <collision>
+    <geometry>
+      <mesh filename="package://blimp_description/meshes/blimp_collision.dae"/>
+    </geometry>
+  </collision>
+</link>
+<joint name="base_to_gondola_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="gondola_link"/>                  
+    <origin xyz="${gondola_xyz}" rpy="${gondola_rpy}" />
+</joint>
+
+</robot>
+

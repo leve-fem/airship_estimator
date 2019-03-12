@@ -1,0 +1,35 @@
+<launch>
+
+	<arg name="model" default="$(find airship_estimator)/urdf/01-blimp.urdf.xacro"/>
+	<arg name="model_2" default="$(find airship_estimator)/urdf/02-blimp.urdf.xacro"/>
+
+	<param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+	<param name="robot_description_real" command="$(find xacro)/xacro.py $(arg model_2)" />
+	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find airship_estimator)/launch/droni.rviz"/>
+
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" ></node>
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+
+	<node name="joint_state_publisher_reals" pkg="joint_state_publisher" type="joint_state_publisher" >
+	  <remap from="robot_description" to="robot_description_real" />
+	  <remap from="joint_states" to="joint_states_real" />
+	</node>
+	<node name="robot_state_publisher_real" pkg="robot_state_publisher" type="robot_state_publisher" >
+	  <remap from="robot_description" to="robot_description_real" />
+	  <remap from="joint_states" to="joint_states_real" />
+	</node>
+
+  	<node pkg="rosbag" type="play" name="rosbag_data_set" required="true" args="$(find airship_estimator)/bag_files/data_set.bag"/>
+
+
+	<include file="$(find airship_estimator)/launch/ekf.launch"/>
+	 <node pkg="rosbag" type="record" name="record_results" args="record -o $(find airship_estimator)/bag_files/results_ekf -a" />
+
+	<!-- <include file="$(find airship_estimator)/launch/ukf.launch"/>
+	<node pkg="rosbag" type="record" name="record_results" args="record -o $(find airship_estimator)/bag_files/results_ukf -a" /> -->
+
+	<!-- <include file="$(find airship_estimator)/launch/lpf.launch"/>
+	<node pkg="rosbag" type="record" name="record_results" args="record -o $(find airship_estimator)/bag_files/results_lpf -a"/> -->
+
+</launch>

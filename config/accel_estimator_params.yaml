@@ -1,0 +1,11 @@
+filter_gains:
+  linear_x: [0.25,0.45,0.2]
+  linear_y: [0.3,0.4,0.2]
+  linear_z: [0.3,0.4,0.2]
+  angular_x: [0.1,0.9,0.0]
+  angular_y: [0.15,0.65,0.0]
+  angular_z: [0.25,0.75,0.0]
+pub_estimated_accel_topic_name: /droni_sensors/angular_accel_filtered
+pub_corrected_accel_topic_name: /droni_sensors/imu/data_corrected
+sub_odom_topic_name: /odometry/filtered
+gondola_pos: [1.357,0.0,-1.43]

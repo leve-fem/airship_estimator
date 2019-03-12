@@ -1,0 +1,6 @@
+<launch> 
+
+<node pkg="airship_estimator" type="accel_estimator_node" name="accel_estimator_node">
+    <rosparam command="load" file="$(find airship_estimator)/config/accel_estimator_params.yaml" />
+</node>
+</launch>
