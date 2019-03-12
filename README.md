@@ -4,7 +4,7 @@
 
 1. Clone this project.
 
-2. Install [robot_localization](http://www.dropwizard.io/1.0.2/docs/) 
+2. Install [robot_localization](http://wiki.ros.org/robot_localization) 
 
 3. Run command below for running the data set available
 ```
