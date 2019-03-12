@@ -4,9 +4,11 @@
 
 1. Clone this project.
 
-2. Install [robot_localization](http://www.dropwizard.io/1.0.2/docs/) 
+2. Install [robot_localization](http://wiki.ros.org/robot_localization) 
 
-3. Run command below for running the data set available
+3. Download the file [data_set.bag](https://www.dropbox.com/s/abjkcnbxy7qy39h/data_set.bag?dl=0) and save inside the folder bag_files
+
+4. Run command below for running the data set available
 ```
 roslaunch airship_estimator play_data_set.launch
 ```
