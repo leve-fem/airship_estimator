@@ -3,15 +3,15 @@
 This package was developed for comparative porposes. It contains algorithms for pose and velocity estimation of a robotic airship. The algorithms available are: Extended Kalman Filter (EKF), Unscented Kalman Filter (UKF) and Low-pass Filter (LPF).
 
 Results obtained are available in:
-[LPF](youtu.be/VL5dvCyOZwY)
-[EKF](youtu.be/jaATwV0rG30)
-[UKF](youtu.be/B26xaKtAyWo)
+[LPF](https://youtu.be/VL5dvCyOZwY)
+[EKF](https://youtu.be/jaATwV0rG30)
+[UKF](https://youtu.be/B26xaKtAyWo)
 
 ## First steps
 
 1. Clone this project.
 
-2. Install [robot_localization](http://wiki.ros.org/robot_localization) 
+2. Install [robot_localization](https://wiki.ros.org/robot_localization) 
 
 3. Download the file [data_set.bag](https://www.dropbox.com/s/abjkcnbxy7qy39h/data_set.bag?dl=0) and save inside the folder bag_files
 
