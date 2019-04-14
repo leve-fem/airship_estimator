@@ -2,7 +2,7 @@
 
 This package was developed for comparative purposes. It contains algorithms for pose and velocity estimation of a robotic airship. The algorithms available are: Extended Kalman Filter (EKF), Unscented Kalman Filter (UKF) and Low-pass Filter (LPF).
 
-Results obtained are available in:
+## Visual results
 
 Using LPF:
 [![Watch the video](https://img.youtube.com/vi/VL5dvCyOZwY/maxresdefault.jpg)](https://youtu.be/VL5dvCyOZwY)
