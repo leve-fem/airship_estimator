@@ -5,13 +5,13 @@ This package was developed for comparative purposes. It contains algorithms for 
 ## Visual results
 
 LPF
-[![Watch the video](https://img.youtube.com/vi/VL5dvCyOZwY/maxresdefault.jpg)](https://youtu.be/VL5dvCyOZwY)
+[![YouTube](https://img.youtube.com/vi/VL5dvCyOZwY/maxresdefault.jpg)](https://youtu.be/VL5dvCyOZwY)
 
 EKF
-[![Watch the video](https://img.youtube.com/vi/jaATwV0rG30/maxresdefault.jpg)](https://youtu.be/jaATwV0rG30)
+[![YouTube](https://img.youtube.com/vi/jaATwV0rG30/maxresdefault.jpg)](https://youtu.be/jaATwV0rG30)
 
 UKF
-[![Watch the video](https://img.youtube.com/vi/B26xaKtAyWo/maxresdefault.jpg)](https://youtu.be/B26xaKtAyWo)
+[![YouTube](https://img.youtube.com/vi/B26xaKtAyWo/maxresdefault.jpg)](https://youtu.be/B26xaKtAyWo)
 
 ## First steps
 
