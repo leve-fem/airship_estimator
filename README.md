@@ -4,13 +4,13 @@ This package was developed for comparative purposes. It contains algorithms for 
 
 ## Visual results
 
-Using LPF:
+LPF
 [![Watch the video](https://img.youtube.com/vi/VL5dvCyOZwY/maxresdefault.jpg)](https://youtu.be/VL5dvCyOZwY)
 
-Using EKF:
+EKF
 [![Watch the video](https://img.youtube.com/vi/jaATwV0rG30/maxresdefault.jpg)](https://youtu.be/jaATwV0rG30)
 
-Using UKF:
+UKF
 [![Watch the video](https://img.youtube.com/vi/B26xaKtAyWo/maxresdefault.jpg)](https://youtu.be/B26xaKtAyWo)
 
 ## First steps
