@@ -1,11 +1,8 @@
 <launch>
 	<rosparam param="use_sim_time">true</rosparam>
-	<arg name="model" default="$(find airship_estimator)/urdf/01-blimp.urdf.xacro"/>
-	<arg name="model_2" default="$(find airship_estimator)/urdf/02-blimp.urdf.xacro"/>
+	
+	<!-- Load Airship visual model in Rviz -->
+	<include file="$(find airship_estimator)/launch/load_rviz_visual_model.launch"/>
 
-	<param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
-	<param name="robot_description_real" command="$(find xacro)/xacro.py $(arg model_2)" />
-	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find airship_estimator)/launch/droni.rviz"/>
-
-  	<node pkg="rosbag" type="play" name="rosbag_data_set" required="true" args="$(find airship_estimator)/bag_files/results_ukf.bag -r 3"/>
+  	<node pkg="rosbag" type="play" name="rosbag_data_set" required="true" args="$(find airship_estimator)/bag_files/results_ekf.bag -r 3"/>
 </launch>

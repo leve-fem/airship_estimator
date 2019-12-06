@@ -1,0 +1,26 @@
+<launch> 
+
+	<!-- Use simulation time -->
+	<rosparam param="use_sim_time">true</rosparam>
+
+	<!-- Load Airship visual model in Rviz -->
+	<include file="$(find airship_estimator)/launch/load_rviz_visual_model.launch"/>
+
+	<!-- Publish robot joint states -->
+	<include file="$(find airship_estimator)/launch/publish_robot_states.launch"/>
+
+	<!-- Open multiplot -->
+	<node name="rqt_multiplot" pkg="rqt_multiplot" type="rqt_multiplot" args="--multiplot-config $(find airship_estimator)/launch/rqt_multiplot_wind_estimators.xml"/>
+	
+	<!-- Run pose and velocity estimator -->
+	<include file="$(find airship_estimator)/launch/ekf.launch"/>
+
+	<!-- Run wind estimators -->
+	<include file="$(find airship_estimator)/launch/wind_estimator.launch"/>
+
+	<!-- Play dataset -->
+  	<node pkg="rosbag" type="play" name="rosbag_data_set" required="true" args="$(find airship_estimator)/bag_files/wind_validating_test_2.bag"/>
+
+	<!-- <node pkg="rosbag" type="record" name="record_data_set" args="record -o /home/apolo/catkin_ws/bag_files/wind_validating_test_1 -a" /> -->
+
+</launch>

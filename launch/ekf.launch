@@ -2,16 +2,17 @@
 
 	<node pkg="airship_estimator" type="accel_estimator_node" name="accel_estimator_node_ekf">
 	    <rosparam command="load" file="$(find airship_estimator)/config/accel_estimator_params.yaml" />
-	    <remap from="/odometry/filtered" to="/odometry/filtered_ekf"/>
-        <remap from="/droni_sensors/linear_accel_filtered" to="/droni_sensors/linear_accel_filtered_ekf"/>
-        <remap from="/droni_sensors/angular_accel_filtered" to="/droni_sensors/angular_accel_filtered_ekf"/>
-        <remap from="/droni_sensors/imu/data_corrected" to="/droni_sensors/imu/data_corrected_ekf"/>
+        <!-- <remap from="/droni_sensors/linear_accel_filtered" to="/droni_sensors/linear_accel_filtered_ekf"/> -->
+        <!-- <remap from="/droni_sensors/angular_accel_filtered" to="/droni_sensors/angular_accel_filtered_ekf"/> -->
+	    <!-- <remap from="/odometry/filtered" to="/odometry/filtered_ekf"/> -->
+
+        <!-- <remap from="/droni_sensors/imu/data_corrected" to="/droni_sensors/imu/data_corrected_ekf"/> -->
 	</node>
 	<node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true">
 	    <rosparam command="load" file="$(find airship_estimator)/config/ukf_params.yaml" />
-	    <remap from="/accel/filtered" to="/droni_sensors/linear_accel_filtered_ekf"/>
-	    <remap from="/odometry/filtered" to="/odometry/filtered_ekf"/>
-        <remap from="/droni_sensors/imu/data_corrected" to="/droni_sensors/imu/data_corrected_ekf"/>
+	    <remap from="/accel/filtered" to="/droni_sensors/linear_accel_filtered"/>
+	    <!-- <remap from="/odometry/filtered" to="/odometry/filtered_ekf"/> -->
+        <!-- <remap from="/droni_sensors/imu/data_corrected" to="/droni_sensors/imu/data_corrected_ekf"/> -->
 	</node>
 
 </launch>

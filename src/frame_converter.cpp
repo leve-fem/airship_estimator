@@ -22,6 +22,14 @@ void odomRealCallback(const nav_msgs::Odometry::ConstPtr& odom){
   odom_real_enu_.twist.twist.angular.z = -odom->twist.twist.angular.z;
   odom_real_enu_.twist.twist.angular.y = -odom->twist.twist.angular.y;
 
+  tf::Quaternion q;
+  double roll, pitch, yaw;
+  tf::quaternionMsgToTF(odom->pose.pose.orientation, q);
+  tf::Matrix3x3(q).getRPY(roll, pitch, yaw);
+
+  q = tf::createQuaternionFromRPY(roll, -pitch, -yaw+M_PI/2);
+
+  tf::quaternionTFToMsg(q, odom_real_enu_.pose.pose.orientation);
   odom_real_enu_.header.frame_id = "world";
   odom_real_enu_.child_frame_id = "base_link_real";
   odom_real_pub_.publish(odom_real_enu_);

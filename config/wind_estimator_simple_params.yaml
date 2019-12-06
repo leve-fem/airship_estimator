@@ -1,0 +1,9 @@
+process_covariance: [1.0e-7, 1.0e-7, 1.0e-7, 1.0e-20, 1.0e-5, 1.0e-3, 1.0e-3]
+measurement_covariance: [0.1, 0.1, 0.1, 0.1]
+initial_covariance: [2.0, 2.0, 1.0, 1.0e-6, 12.0, 12.0, 1.0]
+initial_state: [0.0, 0.0, 0.0,1.0, 0.0, 0.0, 0.0]
+sub_odom_topic_name: /odom_real_enu
+sub_pitot_topic_name: /droni_sensors/pitot_pressure
+sub_accel_topic_name: /droni_sensors/angular_accel_filtered
+pub_estimated_wind_topic_name: /wind_speed/filtered_swkf
+lambda_rdot: 0.0

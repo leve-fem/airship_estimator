@@ -1,0 +1,9 @@
+sub_odom_topic_name: /odometry/filtered
+sub_pitot_topic_name: /droni_sensors/pitot_pressure
+sub_accel_topic_name: /droni_sensors/angular_accel_filtered
+pub_estimated_wind_topic_name: /wind_speed/filtered_ekf_cho2011
+process_covariance: [1.0e-3, 1.0e-4, 5.0e-6]
+measurement_covariance: [163.84]
+initial_covariance: [1.0e-2, 1.0e-2, 1.0e-8]
+initial_state: [0.0,0.0,0.55]
+lambda_rdot: 0.0
