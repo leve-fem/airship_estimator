@@ -65,7 +65,7 @@ The model-based wind estimators (Extended Kalman Filters) are impelemented in C+
 
 The Neural Network is implemented in Python as a ROS node in file ```src/wind_estimator_nn.py```.
 
-The Hybrid estimator is implemented in Python as a ROS node in file ```src/wind_estimator_hybrid.cpp```.
+The Hybrid estimator is implemented in C++ as a ROS node in file ```src/wind_estimator_hybrid.cpp```.
 
 Each node has a configuration file in the folder ```config/``` in which the user can set the covariance matrices, topic names and other parameters.
 
