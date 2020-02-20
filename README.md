@@ -79,20 +79,26 @@ Further details can be found in the papers below:
 ## How to cite
 If you find this code useful in your research, please consider citing:
 
-    @inproceedings{marton2019SBAI,
-        year = {2019},
-        month = {oct},
-        author = { Marton, A. S. and Nogueira, L. A. C. de O. and Fioravanti, A. and de Paiva, E. C.},
-        title = {Comparative study for Robotic Airship State estimation with {LPF}, {EKF} and {UKF}},
-        booktitle = {2019 {SBAI} - XIV  Simp{\'{o}}sio Brasileiro de Automa{\c{c}}{\~{a}}o Inteligente}
+    @inproceedings{Marton2019,
+      doi = {10.17648/sbai-2019-111114},
+      url = {https://doi.org/10.17648/sbai-2019-111114},
+      year = {2019},
+      publisher = {Galoa},
+      author = {Apolo Silva Marton and Lucas A.C.O. Nogueira and Andre Ricardo Fioravanti and Ely C. de Paiva},
+      title = {Comparative study for Robotic Airship State estimation with {LPF},  {EKF} and {UKF}},
+      booktitle = {Anais do 14{\textordmasculine} Simp{\'{o}}sio Brasileiro de Automa{\c{c}}{\~{a}}o Inteligente}
     }
     
-    @misc{marton2019arXiv,
-        title={Hybrid Model-Based and Data-Driven Wind Velocity Estimator for the Navigation System of a Robotic Airship},
-        author={Apolo Silva Marton and André Ricardo Fioravanti and José Raul Azinheira and Ely Carneiro de Paiva},
-        year={2019},
-        eprint={1907.06266},
-        archivePrefix={arXiv},
-        primaryClass={eess.SY}
+    @article{Marton2020,
+      doi = {10.1007/s40430-020-2215-8},
+      url = {https://doi.org/10.1007/s40430-020-2215-8},
+      year = {2020},
+      month = feb,
+      publisher = {Springer Science and Business Media {LLC}},
+      volume = {42},
+      number = {3},
+      author = {Apolo Silva Marton and Andr{\'{e}} Ricardo Fioravanti and Jos{\'{e}} Raul Azinheira and Ely Carneiro de Paiva},
+      title = {Hybrid model-based and data-driven wind velocity estimator for an autonomous robotic airship},
+      journal = {Journal of the Brazilian Society of Mechanical Sciences and Engineering}
     }
   
