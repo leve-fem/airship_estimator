@@ -18,7 +18,7 @@ It is a pre-requisite the [ROS](http://wiki.ros.org/ROS/Installation) version me
 
 5. Compile all the project;
 
-6. Running command below you can test with the installation was successfully completed.
+6. Running command below you can test if the installation was successfully completed.
 ```
 roslaunch airship_estimator play_data_set.launch
 ```
