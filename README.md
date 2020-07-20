@@ -74,7 +74,7 @@ Further details can be found in the papers below:
 
 [Comparative study for Robotic Airship State estimation with LPF, EKF and UKF](https://proceedings.science/sbai-2019/papers/comparative-study-for-robotic-airship-state-estimation-with-lpf--ekf-and-ukf)
 
-[Hybrid Model-Based and Data-Driven Wind Velocity Estimator for the Navigation System of a Robotic Airship](https://arxiv.org/abs/1907.06266)
+[Hybrid Model-Based and Data-Driven Wind Velocity Estimator for the Navigation System of a Robotic Airship](https://link.springer.com/article/10.1007/s40430-020-2215-8)
 
 ## How to cite
 If you find this code useful in your research, please consider citing:
